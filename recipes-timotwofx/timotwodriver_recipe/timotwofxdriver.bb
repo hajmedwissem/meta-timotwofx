@@ -23,6 +23,8 @@ do_compile() {
 
 }
 
+KERNEL_MODULE_AUTOLOAD += "timotwofxdriver"
+
 do_install() {
     install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
     install -m 0644 timotwofxdriver.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/

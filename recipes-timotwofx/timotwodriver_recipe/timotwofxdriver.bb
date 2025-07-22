@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 inherit module
 
 SRC_URI = "git://github.com/hajmedwissem/timotwofx_driver.git;protocol=https;branch=main"
-SRCREV = "bf914d89ed5ca0cf5d05d5e2f1692216ca61b5b2"
+SRCREV = "${AUTOREV}"
 
 
 
@@ -23,7 +23,7 @@ do_compile() {
 
 }
 
-KERNEL_MODULE_AUTOLOAD += "timotwofxdriver"
+#KERNEL_MODULE_AUTOLOAD += "timotwofxdriver"
 
 do_install() {
     install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
